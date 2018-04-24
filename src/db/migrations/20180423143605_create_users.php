@@ -16,8 +16,8 @@ class CreateUsers extends AbstractMigration
             ->addColumn('email', 'string', 255)
             ->addColumn('password', 'string', 255)
             ->addColumn('created_at', 'datetime')
-            ->addColumn('updated_at', 'datetime')
-            ->addColumn('deleted_at', 'datetime')
+            ->addColumn('updated_at', 'datetime', ['null' => true])
+            ->addColumn('deleted_at', 'datetime', ['null' => true])
             ->create();
     }
 

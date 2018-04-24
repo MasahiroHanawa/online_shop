@@ -1,0 +1,14 @@
+{% include 'layouts/header.twig' %}
+
+<article>
+{% if products %}
+    <ul>
+    {% for product in products %}
+        <li><img src="{{ product['image_m'] }}"></li>
+        <li>{{product['product_name']}}</li>
+        <li>{{product['product_name']}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+</article>
+{% include 'layouts/footer.twig' %}

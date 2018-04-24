@@ -53,6 +53,7 @@ class ComposerStaticInit593fe7253b9605d501335db15304087f
         array (
             'Invoker\\' => 8,
             'Illuminate\\Support\\' => 19,
+            'Illuminate\\Pagination\\' => 22,
             'Illuminate\\Events\\' => 18,
             'Illuminate\\Database\\' => 20,
             'Illuminate\\Contracts\\' => 21,
@@ -157,6 +158,10 @@ class ComposerStaticInit593fe7253b9605d501335db15304087f
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/support',
+        ),
+        'Illuminate\\Pagination\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/pagination',
         ),
         'Illuminate\\Events\\' => 
         array (

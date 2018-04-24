@@ -15,8 +15,8 @@ class CreateColors extends AbstractMigration
         $table->addColumn('code', 'string', 255)
             ->addColumn('name', 'string', 255)
             ->addColumn('created_at', 'datetime')
-            ->addColumn('updated_at', 'datetime')
-            ->addColumn('deleted_at', 'datetime')
+            ->addColumn('updated_at', 'datetime', ['null' => true])
+            ->addColumn('deleted_at', 'datetime', ['null' => true])
             ->create();
     }
 
