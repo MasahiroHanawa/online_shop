@@ -19,8 +19,8 @@ class CreateProducts extends AbstractMigration
             ->addColumn('product_name', 'string', 255)
             ->addColumn('color_id', 'integer')
             ->addColumn('created_at', 'datetime')
-            ->addColumn('updated_at', 'datetime')
-            ->addColumn('deleted_at', 'datetime')
+            ->addColumn('updated_at', 'datetime', ['null' => true])
+            ->addColumn('deleted_at', 'datetime', ['null' => true])
             ->create();
     }
 

@@ -1,25 +1,21 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\Controller;
-use Twig_Loader_Filesystem;
-use Twig_Environment;
 
-
-class HomeController extends Controller
+class HomeController extends BaseController
 {
-    public function __construct()
+    public function __construct($product)
     {
+        $this->product = $product;
         parent::__construct();
     }
     
     public function index()
     {
-//        $loader = new Twig_Loader_Filesystem(ROOT.'app/Views');
-//        $twig = new Twig_Environment($loader);
-//        echo $twig->render('index.twig', [] );
-        $loader = new Twig_Loader_Filesystem(ROOT.'app/Views');
-        $twig = new Twig_Environment($loader);
-        $this->showView('index.twig', [] );
+        $products = $this->product->allProducts();
+
+        $this->showView('home/index.html.twig', [
+            'products' => $products
+        ]);
     }
 }

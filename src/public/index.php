@@ -1,7 +1,9 @@
 <?php
 
 define("ROOT", __DIR__."/../");
+require_once '../vendor/autoload.php';
 
-require '../vendor/autoload.php';
+$router = new App\Routes\webRouter();
 
-require '../app/Routes/web.php';
+$router->webRoute();
+
